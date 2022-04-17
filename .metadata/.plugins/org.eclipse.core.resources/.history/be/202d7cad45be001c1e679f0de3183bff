@@ -1,0 +1,31 @@
+package com.item.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.item.model.Item;
+import com.item.repository.ItemRepository;
+import com.item.service.ItemService;
+
+public class ItemServiceImpl implements ItemService {
+
+	@Autowired
+	ItemRepository itemRepo;
+
+	@Override
+	public List<Item> getItems() {
+		return itemRepo.findAll();
+	}
+
+	@Override
+	public Item getItem(Long id) {
+		return itemRepo.findById(id).get();
+	}
+
+	@Override
+	public Item saveItem(Item item) {
+		return itemRepo.save(item);
+	}
+
+}

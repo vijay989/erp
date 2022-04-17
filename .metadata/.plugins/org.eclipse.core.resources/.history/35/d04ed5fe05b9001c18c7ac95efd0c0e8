@@ -1,0 +1,16 @@
+package com.item.repository.impl;
+
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Repository;
+
+import com.item.repository.ItemRepository;
+
+@Primary
+@Repository
+public class ItemRepositoryImpl {
+
+	private ItemRepository itemRepository;
+
+	
+	
+}

@@ -1,0 +1,14 @@
+package com.item.service;
+
+import java.util.List;
+
+import com.item.model.Item;
+
+public interface ItemService {
+
+	
+	public List<Item> getItems();
+	
+	public Item getItem();
+		
+}
